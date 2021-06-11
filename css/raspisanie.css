@@ -1,0 +1,566 @@
+/*общий ч/б фон с бойцами*/
+.wrapper {
+    background-color: rgb(62, 62, 62);
+    background-image: url(../img/rasp-fon-2.jpg);
+    background-size: 100%;
+	
+
+}
+
+.text__shedule_h2{
+    color: #f0fe38;
+    font-size: 2rem;/* Это: =32px =24pt =200%*/
+	margin: 25px 0 10px 0;
+}
+
+
+.shedule{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,auto);
+
+}
+/*цетровка  БлокаРасписания*/
+.center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+/*блок Шапка РАСПИСАНИЯ*/
+.shedule__head{
+    display: grid;
+    grid-template-columns: 1fr minmax(600px,1100px) 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    background: rgb(141, 138, 138);
+}
+
+.sh__sambo_text{
+    color: #5A5858;
+    font-size: 3rem;
+	display: grid;
+    align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+
+}
+
+.sh__head_zapis{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 25px 0;
+}
+
+
+
+.sh__head_left{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-color: #8d8a8a;
+}
+.sh__head_right{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    background-color: #8d8a8a;
+}
+
+/*Стиль для КНОПКИ ЗАПИСЬ НА ТРЕНИРОВКИ*/
+.btn__zapis{
+    display: grid;
+    grid-template-columns: 80px 250px;
+    grid-template-rows: 35px 35px;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    border: 1px solid #D00003;
+
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F8F802FF;
+
+}
+.btn__link{
+text-decoration: none;
+
+
+}
+
+.btn__zapis:hover {
+    color: #D00003;
+    box-shadow: 3px 3px 4px 1px #f0f0f0ab;
+}
+
+.icon__btn{
+grid-row: 1 / 3;
+justify-self: center;
+}
+
+.btn_txt_top{
+grid-column: 2/3;
+justify-self: center;
+}
+
+.btn_txt_niz{
+grid-column: 2 / 3;
+justify-self: center;
+}
+
+/*Проба: #1 Эфф-т заполнения кнопки при hover*/
+.btn__zapis{
+	/*для эфф-та заполнения кнопки*/
+	position: relative;
+}
+.btn__zapis:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 0;left: 0;width: 0;height: 70px;
+	background: #B9F5;
+	border-radius: 5px;
+	    
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0.71, 0.27, 0.99);
+    transition-delay: 0s;
+	
+}
+.btn__zapis:hover:after{
+	width: 100%;
+}
+
+/*Стиль для блока " ДНИ НЕДЕЛИ ТРЕНИРОВОК" */
+.shedule__week {
+	padding-top: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 25px;
+    background: rgb(141, 138, 138);
+
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-areas:
+    "day-1 day-2 day-3"
+    "day-4 day-5 day-6";
+}
+
+/*Плашка 1 дня = ссылка*/
+.week__day_link{
+    text-decoration: none;
+}
+.week__day_link:hover{
+   box-shadow: 3px 3px 4px 1px #f0f0f0ab;
+   border-radius: 8px;
+}
+
+.week__day_link:hover  .day__h3 {
+    border-left: 6px solid #f0fe38;
+    
+}
+.week__day_link:hover  .day__p {
+    border-left: 6px solid #f0fe38;
+    
+}
+
+
+.day-1{
+   grid-area: day-1;background-color: #dc965f;
+
+}
+.day-2{
+    grid-area: day-2;background-color: #b9a6c1;
+}
+.day-3{
+    grid-area: day-3;background-color: #6aa8f4;
+}
+.day-4{
+    grid-area: day-4;background-color: #FCC266;
+}
+.day-5{
+    grid-area: day-5;background-color: #FC8866;
+}
+.day-6{
+    grid-area: day-6;background-color: #C9986F;
+}
+
+.week_day{
+	display: grid;
+	grid-template-columns: minmax(200px,400px);
+	grid-template-rows: 180px 1fr;
+	border-radius: 8px;
+	
+}
+
+.day__img_1 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-1.jpg");
+	background-size:cover;
+}
+
+.day__img_2 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-2.jpg");
+	background-size:cover;
+}
+
+.day__img_3 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-3.jpg");
+	background-size:cover;
+}
+
+.day__img_4 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-4.jpg");
+	background-size:cover;
+}
+
+.day__img_5 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-5.jpg");
+	background-size:cover;
+}
+
+.day__img_6 {
+	border-radius: 8px 8px 0 0;
+	background-image: url("../img/shed-img-6.jpg");
+	background-size:cover;
+}
+
+.day__text{
+    color: #332d2d;
+  font-size: 18px;
+  line-height: 1.5em; 
+  margin: 15px 10px 15px 10px;
+}
+
+.day__h2{
+margin-bottom: 8px;
+}
+.day__h3, .day__p{
+    border-left: 6px solid  #9f8f7f;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+
+
+/*Расписание ИЗОТОН isoton*/
+
+.isoton {
+display: grid;
+    grid-template-columns: auto;
+	/*4 ряда: Шапка, Расписание, КнопкаЗапись, КартинкиАнимированные*/
+    grid-template-rows: auto auto auto 80px;
+	grid-row-gap: 25px;
+	
+    background-color: #8d8a8a;
+	
+}
+
+/*заголовок  для ИЗОТОН*/
+.isoton__text {
+    color: #5A5858;
+    font-size: 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/*2 столбца для 2-х дней Изотона*/
+.isoton__shedule {
+	
+	/*display: grid;
+	grid-template-columns: repeat(2,minmax(200px, 450px));
+	grid-template-rows: 1;
+	grid-column-gap:  35px;
+	justify-self:center;*/
+
+    display: grid;
+    grid-template-columns: 0px minmax(200px,450px) 0px minmax(200px,450px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 35px;
+    /*центровка внутри блока*/
+    justify-self: center;
+	
+	}
+/*столбец 1,2 расписания Изотона*/
+.istn__day_link{
+    text-decoration: none;
+}
+.isoton__day {
+	border-radius: 8px;
+		/*grid чтоб впихнуть текст и фоновую img*/
+    display: grid;
+	grid-template-columns: minmax(200px,450px);
+    grid-template-rows: auto 350px;
+	
+}
+/*фон расписания 1 Изотон*/
+.istn__day1{
+    background-color: #7fc67f;
+}
+
+.istn__day_text {
+	color: #332d2d;
+  	font-size: 18px;
+  	line-height: 1.5em; 
+  	margin: 15px 10px 15px 10px;
+	padding-left: 0;
+	
+}
+
+.istn__day_h3 {
+	margin-top: 15px;
+}
+
+/*Грид для появления желт.полоски пр ховере*/
+/*Моё решение для появл. слева полоски при hover , текст не смещается*/
+.px8-grid-hover {
+	display: grid;
+	grid-template-columns: 8px 1fr;
+	grid-gap: 15px;
+		
+}
+
+/*размеры полоски для ховера*/
+.px8-for-hover {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+	border-radius: 3px;
+}
+
+/*при hover - справа желт. полоска*/
+.isoton__day:hover .px8-for-hover{
+    border-right: 8px solid #f0fe38;
+}
+
+/*при hover картинка темнеет*/
+.istn__day1:hover .istn__day1_img{
+    filter: brightness(0.5);
+}
+
+.istn__day1_img:hover .batn__isoton{
+	text-decoration: none;
+	display: grid;
+	background-color: #000000;
+	box-shadow: -1px 0px 15px 10px #f0f0f0ab;
+}
+
+/*картинка 1 в расписании Изотон*/
+.istn__day1_img {
+background-image: url("../img/istn-img-1.jpg");
+background-size: cover;
+border-radius: 0 0 8px 8px;
+/*для кнопки "Что такое ИЗОТОН"*/
+position: relative;
+}
+
+/* Кнопка_№1 "Что такое ИЗОТОН" проба*/
+.batn__isoton{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+	
+    
+    border: 2px solid #FFFFFF;
+	display: none;
+	grid-template-columns: 45px 1fr;
+	grid-template-rows: 40px;
+	 justify-content: center;
+    align-items: center;
+	
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+	
+	color: #FFFFFF;
+	padding: 10px 15px 10px 15px;
+	font-size: 24px;
+	 
+}
+
+/*столбец2 расписания Изотона*/
+.istn__day2 {
+    background-color: #5A9389;
+}
+/*.istn__day2:hover .istn__day2_img{
+    filter: brightness(0.5);
+}*/
+
+/*картинка 2 в расписании Изотон*/
+.istn__day2_img {
+background-image: url("../img/istn-img-2.jpg");
+background-size: cover;
+border-radius: 0 0 8px 8px;
+
+/*для кнопки "Что такое ИЗОТОН"*/
+position: relative;
+}
+
+/*  Текст_№2 (с затемнением при hover) "Что такое ИЗОТОН" проба*/
+.batn2__isoton{
+	text-decoration: none;
+	
+	text-align: center;
+	font-size: 24px;
+	line-height: 1.5;
+	color:#FFF;
+	padding-top: 150px;
+	
+	/*фон затемнения*/
+	background-color: #292c479d;
+	
+	/*растягиваю поверх картинки*/
+    position: absolute;
+    top: 0px; left: 0px; bottom: 0; right: 0;
+	
+	/*скрыть до применения hover*/
+	opacity: 0;
+	/*плавно появляется фон*/
+	transition: 0.5s;
+}
+/*при наведении на картинку=появ.текст с фоном*/
+.istn__day2_img:hover .batn2__isoton{
+	opacity: 1;
+}
+
+.istn__day2:hover .istn__day2_img{
+	transform: scale(0.98);
+}
+
+/*кнопка Запись на ИЗОТОН*/
+.istn_knopka_zapis{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 0 0;
+	}
+.istn_btn__link{
+    text-decoration: none;
+	}
+.istn_btn__zapis{
+    display: grid;
+    grid-template-columns: 80px 250px;
+    grid-template-rows: 35px 35px;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    border: 1px solid #D00003;
+
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F8F802FF;
+	
+	/*Для кнопки "Запись": эфф-т заполнения*/
+	position: relative;
+}
+
+.istn_btn__zapis:hover {
+    color: #D00003;
+    box-shadow: 3px 3px 4px 1px #f0f0f0ab;
+}
+.istn_icon__btn{
+    grid-row: 1 / 3;
+    margin-top: 8px;
+	margin-left: 8px;
+}
+/*верхний и нижний текст кнопки "Записаться"*/
+.btn_istn_top{
+	grid-column: 2/3;
+    justify-self: center;
+}
+.btn_istn_niz{
+    grid-column: 2 / 3;
+    justify-self: center;
+}
+
+/*Проба: #1 Эфф-т.заполнения кнопки при hover*/
+
+.istn_btn__zapis:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 0;left: 0;width: 0;height: 70px;
+	background: #B9F5;
+	border-radius: 5px;
+	    
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0.71, 0.27, 0.99);
+    transition-delay: 0s;
+	
+}
+.istn_btn__zapis:hover:after{
+	width: 100%;
+}
+
+
+
+/*Выезжающий блок с текстом*/
+.ex2__popup{
+    width: 270px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0 0 0 10px;
+    /*background-color: #080808;*/
+    color: #FFF;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center; justify-content:space-between;
+
+    position: relative;
+    /*блок изначально спрятан слева*/
+    left: -225px;
+
+    transition: left ease-in-out 500ms 300ms;
+}
+.ex2__popup:after{
+    content: ">>";
+    background-color: #080808;
+    height: 45px;
+    width: 45px;
+    padding-top: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.ex2__popup:hover{
+    left: 0;
+	background-color: #080808;
+
+}
+/*Выезжающий блок с текстом: буквы*/
+.ex2__popup span{
+    opacity: 0;
+    transition: opacity 1500ms;
+}
+/*проявление букв*/
+.ex2__popup span:nth-child(1){transition-delay: 400ms}
+.ex2__popup span:nth-child(2){transition-delay: 1300ms}
+.ex2__popup span:nth-child(3){transition-delay:900ms}
+.ex2__popup span:nth-child(4){transition-delay:500ms}
+.ex2__popup span:nth-child(5){transition-delay:800ms}
+.ex2__popup span:nth-child(6){transition-delay:700ms}
+.ex2__popup span:nth-child(7){transition-delay:600ms}
+.ex2__popup span:nth-child(8){transition-delay:1000ms}
+.ex2__popup span:nth-child(9){transition-delay:800ms}
+.ex2__popup span:nth-child(10){transition-delay:250ms}
+.ex2__popup span:nth-child(11){transition-delay:800ms}
+.ex2__popup span:nth-child(12){transition-delay:1300ms}
+
+.ex2__popup:hover span {
+    opacity: 1;
+}
+
+.ex2__text{
+
+}
+
+

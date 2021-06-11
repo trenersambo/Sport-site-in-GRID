@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+.twoface-card{
+    display: flex;
+    justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+/*background: black;*/
+/*переспектива при развороте карточки*/
+perspective: 900px;
+}
+
+/*картинка №1*/
+.card{
+    position: relative;
+   width: 400px;
+    height: 300px;
+
+    /*вращение карточки в теч. 1,5сек*/
+    transition: 1.5s;
+
+    /*3D эффект при перевороте картинки*/
+    transform-style: preserve-3d;
+}
+
+/*картинка №2*/
+.cardtwo{
+    position: relative;
+   width: 400px;
+    height: 300px;
+
+    /*вращение карточки в теч. 1,5сек*/
+    transition: 1.5s;
+
+    /*3D эффект при перевороте картинки*/
+    transform-style: preserve-3d;
+}
+
+/*картинка №3*/
+.card3{
+    position: relative;
+   width: 400px;
+    height: 300px;
+
+    /*вращение карточки в теч. 1,5сек*/
+    transition: 1.5s;
+
+    /*3D эффект при перевороте картинки*/
+    transform-style: preserve-3d;
+}
+
+/*лиц.сторона статьи №1 в Блоге*/
+.front{
+    background: url("../img/kett-blog-1.jpg") center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+ width: 100%;
+    height: 100%;
+
+    /*прячет спину*/
+    backface-visibility: hidden;
+    
+    border-radius: 50px;
+
+}
+
+/*лиц.сторона статьи №2 в Блоге*/
+.fronttwo{
+    background: url("../img/interval-blog-2.jpg") center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+ width: 100%;
+    height: 100%;
+
+    /*прячем спину, чтоб до переворота не б.видно*/
+    backface-visibility: hidden;
+    
+    border-radius: 50px;
+
+}
+
+/*лиц.сторона статьи №3 в Блоге*/
+.front-3{
+    background: url("../img/golod-blog-3.jpg") center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+ width: 100%;
+    height: 100%;
+
+    /*прячет спину*/
+    backface-visibility: hidden;
+    
+    border-radius: 50px;
+
+}
+
+.back{
+background: white;
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+padding: 20px;
+transform: rotateY(180deg);
+    /*прячет спину*/
+    backface-visibility: hidden;
+    border-radius: 50px;
+}
+
+/*как перевернуть карточку. Для JS*/
+.flip{
+    transform: rotateY(180deg);
+}
+
+
+/*доп-но: стиль для текста на спине карточки*/
+.back h1 {
+margin-bottom: 15px;
+	width: 90%;
+}
+
+.desc span{
+	color: brown;
+}
+
+
+.desc {
+	margin-bottom: 10px;
+}

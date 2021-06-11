@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ч/б фон с бойцами для БЛОГ & МАГАЗИН
+.wrapper_blog_shop {
+    background-color: rgb(62, 62, 62);
+    background-image: url(../img/rasp-fon-2.jpg);
+    background-size: 100%;
+}*/
+
+/*grid для отцентрованного блога 1 колонка - 1 строка*/
+.blog{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+}
+
+.text__blog_h2{
+    color: #f0fe38;
+    font-size: 2rem;/* Это: =32px =24pt =200%*/
+	margin: 25px 0 10px 0;
+}
+
+/*div для серого фона Блога*/
+.blog_all {
+	background-color: #8d8a8a;
+	border-radius: 8px;
+}
+
+/*сво-ва grid для Блока  Заметка БЛОГА №1*/
+.blog__club {
+	display: grid;
+	grid-template-columns: minmax(150px, 400px) minmax(250px, 600px) 100px;
+	grid-template-rows: 100px 200px;
+	 
+	/*выставить grid по центру блока*/
+	justify-content: center;
+	
+	margin-top: 20px;
+	
+	/*Прячу текст (при уменьшении экрана)*/
+	overflow: hidden;
+	}
+
+/*отступ вниз у последн.блока */
+.blog__club:last-child{
+	margin-bottom: 50px;
+}
+
+
+.blog__left_foto {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;	
+	
+	background-color: #6E6E6D;
+}
+
+/*Стили для ЗАГОЛОВКА СТАТЬИ В БЛОГЕ*/
+.blog__top_text  {
+	background-color: #078357;
+	 
+}
+/*заголовок статьи в блоге*/
+.p__top_text {
+	color: #1F0000;
+	 font-size: 32px; 
+	font-weight: 600;
+	  align-self: center; 
+	margin-left: 15px;
+}
+
+
+
+.blog__right_more {
+	grid-column: 3 / 4;
+	grid-row: 1 / 3;
+	background-color: #fff;
+	
+}
+
+.blog__niz_text {
+	background-color: #598756;
+}
+
+.p__niz_text {
+	font-size: 18px;
+	line-height: 1.3em;
+	margin: 5px 5px 0 20px;
+	
+	/*красная строка*/
+	text-indent: 15px;
+}
+
+
+/* стиль кнопки "Читать далее"*/
+/*Блок дял стрелки вправо*/
+
+.a__right_more {
+	text-decoration: none;
+}
+
+/*Блок для Читать Далее*/
+.arrow__right {
+	height: 300px;
+}
+
+ 
+.strelka-right-5 {
+    margin: 20px 8px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    fill: #337AB7;
+    transition: fill 0.5s ease-out, transform 0.3s ease-in;   
+}
+ 
+.strelka-right-5 {
+    transform: rotate(90deg);
+}
+ 
+.strelka-right-5:hover {
+    fill: #BFE2FF;
+    transform: scale(1.2);
+}
+ 
+.arrow__right:hover .strelka-right-5{
+    transform: rotate(270deg) scale(1.2);
+}
+ 
+/*Стиль для "ЧИТАТЬ...*/
+.more_text{
+	color: #000000;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center; 
+}
+.more_text:hover{
+	color: #F40006;
+}
+

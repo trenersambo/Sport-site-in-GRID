@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Шапка*/
+.top_header_box{
+    display: grid;
+    grid-template-columns:80px 180px auto ;
+    /*grid-template-rows: 70px ;*/
+    column-gap: 15px;
+   
+    background-color: rgb(141, 138, 138);
+    align-items: center;
+	
+}
+
+.logo{
+    grid-row: 1; 
+    }
+
+.telefon__link{
+	text-decoration: none;
+	color: #0C0C0D;
+	font-size: 18px;
+}
+
+.telefon, 
+.adress{
+	color: #0C0C0D;
+	font-size: 18px;
+}
+.telefon:before{
+    content: url(../svg/card-2.svg) ;
+    margin-right: 5px;
+	
+}
+
+.adress:before{
+    content: url(../svg/card-3.svg) ;
+    margin-right: 5px;
+}
+
+
+.logo__img{
+    height: 50%;
+    width: 50%;
+    margin-left: 20px;
+	border-radius: 25px;
+
+}
+.middle_header{
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 500px ;
+    
+    background-color: rgb(71, 66, 66);
+
+    
+}
+
+.header_img{
+ background-image: url("../img/zal-1.jpg");
+ background-size: cover;
+
+}
+
+
+.header__text{
+	margin-top: 95px;
+    margin-left: 15%;
+    padding-left: 10px;
+    color: rgb(0 0 0);
+    font-weight: 900;
+    font-size: 35px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: rgb(247, 6, 6);
+    text-shadow: 2px -2px 2px #fdfbfb;
+}
+
+/*Навигация */
+
+.menu__li{
+	list-style: none;
+	align-items: center;
+	font-size: 18px;
+	line-height: 36px;
+}
+.li_link{
+	text-decoration: none;
+	color: #0C0C0D;
+	font-size: 18px;
+}
+
+/*Серая полоса для МЕНЮ*/
+.nav__menu {
+	display: grid;
+	grid-template-columns:  repeat(5,auto);
+	grid-template-rows: 60px;
+	
+	background: rgb(141, 138, 138);
+}
+
+.menu__name {
+	padding-left: 15px;
+}
+
+
+
+
+
+
