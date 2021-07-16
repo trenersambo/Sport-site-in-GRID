@@ -4,12 +4,18 @@
 	box-sizing: border-box;
 }
 
+/*чтоб grid'ы не съеживались после 650...300рх*/
+.body__all {
+	min-width: fit-content;
+}
+
+
 /*Шапка*/
 .top_header_box{
     display: grid;
     grid-template-columns:80px 180px auto ;
     /*grid-template-rows: 70px ;*/
-    column-gap: 15px;
+    column-gap: 5px;
    
     background-color: rgb(141, 138, 138);
     align-items: center;
@@ -52,7 +58,7 @@
 }
 .middle_header{
     display: grid;
-    grid-template-columns:  1fr;
+    grid-template-columns:  minmax(640px, 1fr)/*было: 1fr*/;
     grid-template-rows: 500px ;
     
     background-color: rgb(71, 66, 66);
@@ -78,6 +84,7 @@
     border-left-style: solid;
     border-left-color: rgb(247, 6, 6);
     text-shadow: 2px -2px 2px #fdfbfb;
+	filter: drop-shadow(6px 5px 8px #FFF);
 }
 
 /*Навигация */
@@ -110,5 +117,8 @@
 
 
 
-
-
+/*Для экрана >650рх = прячу менюБутерброд*/
+.menu__top {
+	display: none;
+	padding-left: 20px;
+}

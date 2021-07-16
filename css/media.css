@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width: 650px){
+	
+	/*Лого не показываю*/
+	.logo{
+		display: none;
+	}
+	
+	/*вкл. видимость менюБутерброда*/
+	.menu__top{
+		display: block;
+	}
+	
+	/*смена стиля адреса в шапке*/
+	.adress{
+	display: none;
+}
+	.telefon__link{
+		color: #FFF226;
+	}
+	
+	/*текст на фоне бороц.зала*/
+	.header__text{
+	margin-top: 16px;
+    margin-left: 3%;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 30px;
+    text-shadow: 4px 4px 11px #000000;
+    filter: drop-shadow(4px 5px 8px black);
+    
+}
+	/*стиль картинки борцовского зала*/
+	.middle_header{
+		grid-template-rows: 180px ;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
