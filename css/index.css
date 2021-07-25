@@ -7,6 +7,7 @@
 /*чтоб grid'ы не съеживались после 650...300рх*/
 .body__all {
 	min-width: fit-content;
+	 
 }
 
 
@@ -19,6 +20,9 @@
    
     background-color: rgb(141, 138, 138);
     align-items: center;
+	 
+	/*для показа МенюГамбургер через .nav для @media<650px*/
+	position: relative;
 	
 }
 
@@ -121,4 +125,17 @@
 .menu__top {
 	display: none;
 	padding-left: 20px;
+}
+
+
+
+/*Для экрана >650рх = прячу СписокМенюБутерброда*/
+.nav {
+	display: none;
+}
+
+/*скрыл галочку у "checkbox", видим только ГАМБУРГЕР при экране <650px*/
+#switcher {
+	display: none;
+
 }

@@ -1,9 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*стили если экран менее 650 рх: start*/
 @media (max-width: 650px){
 	
-	/*Лого не показываю*/
+	/*Лого не показываю если экран <650px*/
 	.logo{
 		display: none;
 	}
@@ -23,8 +24,8 @@
 	
 	/*текст на фоне бороц.зала*/
 	.header__text{
-	margin-top: 16px;
-    margin-left: 3%;
+	margin-top: 45px;
+    margin-left: 30%;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 30px;
@@ -37,13 +38,104 @@
 		grid-template-rows: 180px ;
 	}
 	
+	/*скрыть Меню если экран <650px*/
+	.nav__menu{
+		display: none;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	/*Стили для ГАМБУРГЕР*/
+/*скрыл галочку у "checkbox", видим только ГАМБУРГЕР*/
+#switcher {
+	display: none;
+
 }
+	/*Показываю на экране <650px МенюГамбургера*/
+	.nav{
+	display: block;
+	
+	/*стили БлокаМенюГамбургера*/
+	background-color: #fff;
+	padding: 16px 16px 32px 32px;
+	
+	top: 35px;
+	left: 0;
+	width: 180px;
+	 box-sizing: border-box;
+	transition: right .3s;
+	
+	/*расположение Меню
+	top: 35px;	*/
+		
+	/*width: 100%;ширинаМеню*/
+    /*height: 100vh;ВысотаМеню*/
+	/*display: flex;*/
+    /*justify-content:flex-start;*/
+	
+	/*для показа МенюГамбургер через .nav для @media<650px*/
+	/*родитель: .top_header_box*/
+	position: absolute;	
+	}
+	
+	
+	/*Стили для Появлен./исчезн. МЕНЮ */
+	/*от клика на Гамбургер (ч/з id="switcher")*/
+	#switcher:checked ~ .nav{
+		/*right: -232px;*/
+		
+		/*убрал прокрутку и фантомное поле справа*/
+		width: 0;
+		visibility: hidden;
+		display: none;
+	}
+	 /* #switcher:checked ~ .nav {
+    right:  -100%;}*/ 
+
+	.close_menu{
+	padding-left: 85%;
+	}
+	
+	
+	/*стили для слов в МенюГамбургера*/
+.nav__heading{
+margin-bottom: 5px;
+font-size: 16px;
+line-height: 18px;
+color: #000000;
+}
+	/*отступ м/у абзацамиМеню*/
+.li_nodecor {
+	list-style-type: none;
+	margin-bottom: 20px;
+	}
+	
+	/*стиль ЗаголокАбзацевМеню*/
+	.color-h3-menu{
+text-decoration: none;
+font-size: 16px;
+line-height: 19px;
+color: #FF1700;
+}
+	/*Убрать СтильСсылок*/
+	.nav__items{
+	margin-left: 20px;
+	list-style-type: none;
+}
+	/*стиль  СловАбзацев*/
+.li_nolink{
+text-decoration: none;
+font-size: 16px;
+line-height: 26px;
+color: #6F6E6E;
+}
+	
+	
+	
+	
+	
+	
+	
+}/*стили если экран менее 650 рх: end*/
+
+
+
+

@@ -107,13 +107,15 @@ grid-column: 2 / 3;
 justify-self: center;
 }
 
-/*Проба: #1 Эфф-т заполнения кнопки при hover*/
+
+/*Проба: #1 Эфф-т заполнения кнопки при hover: start*/
+/*Пришлось закоментить: иначе МенюГамбургер при экране<650рх не покажет*/
 .btn__zapis{
 	/*для эфф-та заполнения кнопки*/
-	position: relative;
+	/*position: relative;*/
 }
 .btn__zapis:after{
-	content: '';
+	/*content: '';
 	position: absolute;
 	z-index: 1;
 	top: 0;left: 0;width: 0;height: 70px;
@@ -123,12 +125,15 @@ justify-self: center;
     transition-property: all;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0, 0.71, 0.27, 0.99);
-    transition-delay: 0s;
+    transition-delay: 0s;*/
 	
 }
 .btn__zapis:hover:after{
-	width: 100%;
+	/*width: 100%;*/
 }
+/*Пришлось закоментить: иначе МенюГамбургер при экране<650рх не покажет*/
+/*Проба: #1 Эфф-т заполнения кнопки при hover: end*/
+
 
 /*Стиль для блока " ДНИ НЕДЕЛИ ТРЕНИРОВОК" */
 .shedule__week {
