@@ -1,0 +1,172 @@
+/*сброс стилей*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.center {
+	margin: 0 auto;
+	
+}
+
+/*общий ч/б фон с бойцами*/
+.wrapper {
+ 
+    background-color: rgb(62, 62, 62);
+    background-image: url(../img/rasp-fon-2.jpg);
+    background-size: 100%;
+	
+	padding-top: 55px;
+	padding-bottom: 55px;
+	 }
+
+
+.shedule {
+    max-width: 1200px;
+	
+	/*Бумажный фон (сплошной, без зазоров)*/
+    max-width: 1200px;
+    background-image: url(../img/paper_fon.jpg);
+    /* background-repeat: repeat; */
+    background-size: inherit;
+    padding: 20px 5px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+.shedule__table{
+     
+        display: grid;
+        grid-template-columns: repeat(7, 1fr );
+        grid-template-rows: 50px repeat(5, 1fr);
+        gap: 4px;
+	 	
+}
+
+/*Расчерчиваю Поля построчно*/
+.h_g,
+.k_one,
+.k_two,
+.uni,
+.k_ofp,
+.iso
+{
+border: 1px solid #868686;
+text-align: center;
+		 
+ }
+
+  .k_one:hover, .k_two:hover,
+ .uni:hover,  .k_ofp:hover, .iso:hover{
+     border: 2px solid #353434;
+     margin: -1px;
+     border-radius: 5px;
+ }
+
+ /*при наведении темнеет вся строка */
+ .kids_one_titul:hover ~.kids_one {
+     background-color:lightgreen;
+     transition: 1.5s;
+     border-radius: 5px;
+     border: 2px solid #353434; 
+     margin: -1px; 
+ }
+.kids_two_titul:hover ~.kids_two{
+    background-color:#76eebc;
+    transition: 1.5s; 
+    border-radius: 5px;
+    border: 2px solid #353434;  
+    margin: -1px;  
+}
+.unior_titul:hover ~.unior{
+    background-color:#76ee90;
+    transition: 1.5s; 
+    border-radius: 5px;
+    border: 2px solid #353434;  
+    margin: -1px;   
+}
+.ofp_kids_titul:hover ~.ofp{
+    background-color:#a0f3b2;
+    transition: 1.5s;  
+    border-radius: 5px;
+    border: 2px solid #353434;  
+    margin: -1px;    
+}
+.isoton_titul:hover ~.istn{
+    background-color:#bff1b8;
+    transition: 1.5s; 
+    border-radius: 5px;
+    border: 2px solid #353434; 
+    margin: -1px;  
+}
+
+
+/*Аватар тренера располагаю*/
+.p_trener::before{
+    content: url("../svg/face.svg");
+    vertical-align: top;
+}
+
+/*Стиль текста ШАПКИ таблицы*/
+.p_gruppa,
+.h_day{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/*Стиль Столбца ГРУПП*/
+.kids_one_titul,
+.kids_two_titul,
+.unior_titul,
+.ofp_kids_titul,
+.isoton_titul{
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 35px;
+}
+
+/*Стиль ячеек Расписания*/
+.day1,.day2,.day3,
+.day4,.day5,.day6 {
+    font-size: 18px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.day1:hover,.day2:hover,.day3:hover,
+.day4:hover,.day5:hover,.day6:hover{
+    font-weight: 400;
+    color: #fd0202; 
+    background-color: #fdff91;
+}
+
+.text__shedule_h2 {
+	
+	max-width: 1200px;
+	
+	text-align: center;
+    color: #f0fe38;
+    font-size: 32px;/* Это: =2rem =24pt =200%*/
+	padding-bottom: 35px;
+	 
+}
+
+/* стиль для Хлебных крошек*/
+.backInHome {
+	max-width: 1200px;	
+	text-align:left;
+    color: #FFFFFF;
+    font-size: 16px; 
+	padding-bottom: 15px;
+}
+
+/*стиль для Хлебных крошек*/
+.backInHome_link {
+	color: #FFFFFF;
+    font-size: 16px; 
+	text-decoration: none;
+}
+
