@@ -1,0 +1,135 @@
+/*стили если экран менее 650 рх: start*/
+@media (max-width: 650px){
+    
+/*сброс стилей*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*общий ч/б фон с бойцами*/
+.wrapper {
+    min-height: 100vh;
+	 }
+
+.shedule {
+ margin-top: 25px;
+}
+
+/* РасписаниеВСтолбик*/
+.shedule__table{
+    display: grid;
+    gap: 4px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+ 
+.head_gruppa {
+    display: none;
+}
+
+ /*покажет ДеньНедели Экран<650px*/
+ .day__nameForMedia{
+    display:inline-block;
+}
+
+/*СкрытьДниНедели если РасписаниеВСтолбик*/
+.head_day_1,
+.head_day_2,
+.head_day_3,
+.head_day_4,
+.head_day_5,
+.head_day_6{
+display: none;
+}
+
+/*Выделение имени группы*/
+.kids_one_titul, 
+.kids_two_titul,
+.unior_titul,
+.ofp_kids_titul,
+.isoton_titul{
+    background-color: #adadad;
+}
+
+
+  .k_one:hover, .k_two:hover,
+ .uni:hover,  .k_ofp:hover, .iso:hover{
+     border: 2px solid #353434;
+     margin: -1px;
+     border-radius: 5px;
+ }
+
+
+/*Аватар тренера располагаю*/
+.p_trener::before{
+    content: url("../svg/face.svg");
+    vertical-align: top;
+}
+
+/*Стиль текста ШАПКИ таблицы*/
+.p_gruppa,
+.h_day{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/*Стиль Столбца ГРУПП*/
+.kids_one_titul,
+.kids_two_titul,
+.unior_titul,
+.ofp_kids_titul,
+.isoton_titul{
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 35px;
+}
+
+/*Стиль ячеек Расписания*/
+.day1,.day2,.day3,
+.day4,.day5,.day6 {
+    font-size: 18px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.day1:hover,.day2:hover,.day3:hover,
+.day4:hover,.day5:hover,.day6:hover{
+    font-weight: 400;
+    color: #fd0202; 
+    background-color: #fdff91;
+}
+
+.text__shedule_h2 {
+	
+	max-width: 1200px;
+	
+	text-align: center;
+    color: #f0fe38;
+    font-size: 32px;/* Это: =2rem =24pt =200%*/
+	padding-bottom: 35px;
+	 
+}
+
+/* стиль для Хлебных крошек*/
+.backInHome {
+	max-width: 1200px;	
+	text-align:left;
+    color: #FFFFFF;
+    font-size: 16px; 
+	padding-bottom: 15px;
+}
+
+/*стиль для Хлебных крошек*/
+.backInHome_link {
+	color: #FFFFFF;
+    font-size: 16px; 
+	text-decoration: none;
+}
+
+
+}/*стили если экран менее 650 рх: end*/
