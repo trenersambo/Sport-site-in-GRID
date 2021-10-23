@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*стили если экран менее 650 рх: start*/
+@media (max-width: 650px){
+	
+	/*Лого не показываю если экран <650px*/
+	.logo{
+		display: none;
+	}
+	
+	/*вкл. видимость менюБутерброда*/
+	.menu__top{
+		display: block;
+	}
+	
+	/*смена стиля адреса в шапке*/
+	.adress{
+	display: none;
+}
+	.telefon__link{
+		color: #FFF226;
+	}
+	
+	/*текст на фоне бороц.зала*/
+	.header__text{
+	margin-top: 45px;
+    margin-left: 30%;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 30px;
+    text-shadow: 4px 4px 11px #000000;
+    filter: drop-shadow(4px 5px 8px black);
+    
+}
+	/*стиль картинки борцовского зала*/
+	.middle_header{
+		grid-template-rows: 180px ;
+	}
+	
+	/*скрыть Меню если экран <650px*/
+	.nav__menu{
+		display: none;
+	}
+	
+	/*Стили для ГАМБУРГЕР*/
+/*скрыл галочку у "checkbox", видим только ГАМБУРГЕР*/
+#switcher {
+	display: none;
+
+}
+	/*Показываю на экране <650px МенюГамбургера*/
+	.nav{
+	display: block;
+	
+	/*стили БлокаМенюГамбургера*/
+	background-color: #fff;
+	padding: 16px 16px 32px 32px;
+	
+	top: 35px;
+	left: 0;
+	width: 180px;
+	 box-sizing: border-box;
+	transition: right .3s;
+	
+	/*расположение Меню
+	top: 35px;	*/
+		
+	/*width: 100%;ширинаМеню*/
+    /*height: 100vh;ВысотаМеню*/
+	/*display: flex;*/
+    /*justify-content:flex-start;*/
+	
+	/*для показа МенюГамбургер через .nav для @media<650px*/
+	/*родитель: .top_header_box*/
+	position: absolute;	
+	}
+	
+	
+	/*Стили для Появлен./исчезн. МЕНЮ */
+	/*от клика на Гамбургер (ч/з id="switcher")*/
+	#switcher:checked ~ .nav{
+		/*right: -232px;*/
+		
+		/*убрал прокрутку и фантомное поле справа*/
+		width: 0;
+		visibility: hidden;
+		display: none;
+	}
+	 /* #switcher:checked ~ .nav {
+    right:  -100%;}*/ 
+
+	.close_menu{
+	padding-left: 85%;
+	}
+	
+	
+	/*стили для слов в МенюГамбургера*/
+.nav__heading{
+margin-bottom: 5px;
+font-size: 16px;
+line-height: 18px;
+color: #000000;
+}
+	/*отступ м/у абзацамиМеню*/
+.li_nodecor {
+	list-style-type: none;
+	margin-bottom: 20px;
+	}
+	
+	/*стиль ЗаголокАбзацевМеню*/
+	.color-h3-menu{
+text-decoration: none;
+font-size: 16px;
+line-height: 19px;
+color: #FF1700;
+}
+	/*Убрать СтильСсылок*/
+	.nav__items{
+	margin-left: 20px;
+	list-style-type: none;
+}
+	/*стиль  СловАбзацев*/
+.li_nolink{
+text-decoration: none;
+font-size: 16px;
+line-height: 26px;
+color: #6F6E6E;
+}
+	
+/*Смена Размера 2-х плашек ИЗОТОН*/
+	
+	.isoton {
+		justify-content:center;
+	}
+	
+	.isoton__shedule {
+    display: grid;
+    grid-template-columns: minmax(200px,450px);
+    justify-self:auto;
+ 
+     
+}
+
+	/*разрыв м/у 2-мя плашками ИЗОТОН*/
+	.istn__day2{
+		margin-top: 20px;
+	}
+
+	/*Кнопка записи на Изотон*/
+	.istn_knopka_zapis{
+ 
+	}
+	
+	/*уменьшить заголовок Изотон*/
+.isoton__text {
+	    color: #5A5858;
+    font-size: 22px;
+
+} 
+	
+	
+}/*стили если экран менее 650 рх: end*/
+
+
+
+
+
+
