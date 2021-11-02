@@ -128,13 +128,41 @@ line-height: 26px;
 color: #6F6E6E;
 }
 	
+/*Смена Размера 2-х плашек ИЗОТОН*/
 	
+	.isoton {
+		justify-content:center;
+	}
 	
+	.isoton__shedule {
+    display: grid;
+    grid-template-columns: minmax(200px,450px);
+    justify-self:auto;
+ 
+     
+}
+
+	/*разрыв м/у 2-мя плашками ИЗОТОН*/
+	.istn__day2{
+		margin-top: 20px;
+	}
+
+	/*Кнопка записи на Изотон*/
+	.istn_knopka_zapis{
+ 
+	}
 	
-	
+	/*уменьшить заголовок Изотон*/
+.isoton__text {
+	    color: #5A5858;
+    font-size: 22px;
+
+} 
 	
 	
 }/*стили если экран менее 650 рх: end*/
+
+
 
 
 

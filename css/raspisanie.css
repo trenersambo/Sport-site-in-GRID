@@ -154,15 +154,13 @@ justify-self: center;
 .week__day_link{
     text-decoration: none;
 }
-.week__day_link:hover{
-   box-shadow: 3px 3px 4px 1px #f0f0f0ab;
-   border-radius: 8px;
-}
-
+ 
+/*Боковая желтая полоса при hover*/
 .week__day_link:hover  .day__h3 {
     border-left: 6px solid #f0fe38;
     
 }
+/*Боковая желтая полоса при hover*/
 .week__day_link:hover  .day__p {
     border-left: 6px solid #f0fe38;
     
@@ -195,6 +193,12 @@ justify-self: center;
 	grid-template-rows: 180px 1fr;
 	border-radius: 8px;
 	
+}
+
+/*Тень при Hover на блок Распиание_День_Недели*/
+ .week_day:hover{
+   box-shadow: 3px 3px 4px 1px #f0f0f0ab;
+   border-radius: 8px;
 }
 
 .day__img_1 {
@@ -286,7 +290,7 @@ display: grid;
     display: grid;
     grid-template-columns: 0px minmax(200px,450px) 0px minmax(200px,450px);
     grid-template-rows: 1fr;
-    grid-column-gap: 35px;
+    grid-column-gap: 10px;
     /*центровка внутри блока*/
     justify-self: center;
 	

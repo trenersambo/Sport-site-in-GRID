@@ -63,7 +63,7 @@ perspective: 900px;
     /*прячет спину*/
     backface-visibility: hidden;
     
-    border-radius: 50px;
+ 
 
 }
 
@@ -78,9 +78,7 @@ perspective: 900px;
 
     /*прячем спину, чтоб до переворота не б.видно*/
     backface-visibility: hidden;
-    
-    border-radius: 50px;
-
+   
 }
 
 /*лиц.сторона статьи №3 в Блоге*/
@@ -94,8 +92,6 @@ perspective: 900px;
 
     /*прячет спину*/
     backface-visibility: hidden;
-    
-    border-radius: 50px;
 
 }
 
@@ -110,7 +106,7 @@ padding: 20px;
 transform: rotateY(180deg);
     /*прячет спину*/
     backface-visibility: hidden;
-    border-radius: 50px;
+  
 }
 
 /*как перевернуть карточку. Для JS*/
