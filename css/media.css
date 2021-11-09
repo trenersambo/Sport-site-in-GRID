@@ -63,16 +63,6 @@
 	 box-sizing: border-box;
 	transition: right .3s;
 	
-	/*расположение Меню
-	top: 35px;	*/
-		
-	/*width: 100%;ширинаМеню*/
-    /*height: 100vh;ВысотаМеню*/
-	/*display: flex;*/
-    /*justify-content:flex-start;*/
-	
-	/*для показа МенюГамбургер через .nav для @media<650px*/
-	/*родитель: .top_header_box*/
 	position: absolute;	
 	}
 	
@@ -127,6 +117,33 @@ font-size: 16px;
 line-height: 26px;
 color: #6F6E6E;
 }
+
+/*6 плашек с РасписаниемПоДнямНедели*/
+/*располжить в столбик по одному*/
+.shedule__week {
+    grid-template-areas:
+    "day-1"
+    "day-2" 
+    "day-3"
+    "day-4" 
+    "day-5" 
+    "day-6";
+}
+
+/*убрал фото из 6-ти плашек*/
+/*центровка - получилось через flex*/
+.week_day {
+    display: flex;
+	/* margin: 0 auto; */
+	justify-self: center;
+    border-radius: 8px;
+    width: 450px;
+}
+
+/*задвинул влево плашку Самборулит*/
+.ex2__popup {
+    left: -320px;
+}
 	
 /*Смена Размера 2-х плашек ИЗОТОН*/
 	
@@ -157,7 +174,15 @@ color: #6F6E6E;
 	    color: #5A5858;
     font-size: 22px;
 
-} 
+}
+
+/*карточки товаров по 1 шт в ряду*/
+.shop_all {
+       grid-template-columns: 300px;
+    justify-content: center;
+}
+
+
 	
 	
 }/*стили если экран менее 650 рх: end*/

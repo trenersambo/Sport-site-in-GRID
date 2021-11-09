@@ -64,7 +64,7 @@
 /*заголовок статьи в блоге*/
 .p__top_text {
 	color: #1F0000;
-	 font-size: 32px; 
+	 font-size: 20px; 
 	font-weight: 600;
 	  align-self: center; 
 	margin-left: 15px;
@@ -84,7 +84,7 @@
 }
 
 .p__niz_text {
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 1.3em;
 	margin: 5px 5px 0 20px;
 	
