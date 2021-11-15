@@ -118,6 +118,13 @@ line-height: 26px;
 color: #6F6E6E;
 }
 
+/*КнопкаЗаписьНаСААМБО*/
+.sh__head_zapis {
+    
+    justify-content: flex-start;
+    margin: 15px 0 25px 35px;
+}
+
 /*6 плашек с РасписаниемПоДнямНедели*/
 /*располжить в столбик по одному*/
 .shedule__week {
@@ -134,8 +141,8 @@ color: #6F6E6E;
 /*центровка - получилось через flex*/
 .week_day {
     display: flex;
-	/* margin: 0 auto; */
-	justify-self: center;
+	margin-left: 25px;
+	justify-self: flex-start;
     border-radius: 8px;
     width: 450px;
 }
@@ -144,11 +151,18 @@ color: #6F6E6E;
 .ex2__popup {
     left: -320px;
 }
+
+/*расширил слайдер*/
+.shedule__slider {
+    display: block;
+    
+}
 	
 /*Смена Размера 2-х плашек ИЗОТОН*/
 	
 	.isoton {
-		justify-content:center;
+		justify-content:flex-start;
+		padding-left: 25px;
 	}
 	
 	.isoton__shedule {
@@ -176,12 +190,46 @@ color: #6F6E6E;
 
 }
 
+/*БлокЗаметки_УбралФото*/
+.blog__left_foto {
+    display: none;
+}
+.blog__club {
+   grid-template-columns: minmax(250px, 400px) 100px;
+   justify-content:flex-start;
+   margin-left: 25px;
+}
+
+
 /*карточки товаров по 1 шт в ряду*/
 .shop_all {
        grid-template-columns: 300px;
-    justify-content: center;
+    justify-content:flex-start;
+	padding-left: 25px;
 }
 
+/*контактная форма*/
+.contact_all {
+
+    display: inline-block;
+    justify-content:flex-start;
+	width: 80%;
+    
+}
+
+/*КонтактнФорма_УбралКарту*/
+.map_box {
+  
+    display: none;
+}
+
+/*Футер_ОставитьМеню-СоцСети*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+	justify-content: flex-start;
+}
 
 	
 	
