@@ -118,6 +118,11 @@ line-height: 26px;
 color: #6F6E6E;
 }
 
+.shedule__head {
+ 
+    width: 80%;
+}
+
 /*КнопкаЗаписьНаСААМБО*/
 .sh__head_zapis {
     
@@ -135,6 +140,7 @@ color: #6F6E6E;
     "day-4" 
     "day-5" 
     "day-6";
+	width: 80%;
 }
 
 /*убрал фото из 6-ти плашек*/
@@ -155,7 +161,7 @@ color: #6F6E6E;
 /*расширил слайдер*/
 .shedule__slider {
     display: block;
-    
+    width: 80%;
 }
 	
 /*Смена Размера 2-х плашек ИЗОТОН*/
@@ -163,6 +169,7 @@ color: #6F6E6E;
 	.isoton {
 		justify-content:flex-start;
 		padding-left: 25px;
+		width: 80%;
 	}
 	
 	.isoton__shedule {
@@ -199,6 +206,9 @@ color: #6F6E6E;
    justify-content:flex-start;
    margin-left: 25px;
 }
+.blog_all {
+    width: 80%;
+}
 
 
 /*карточки товаров по 1 шт в ряду*/
@@ -206,6 +216,7 @@ color: #6F6E6E;
        grid-template-columns: 300px;
     justify-content:flex-start;
 	padding-left: 25px;
+	width: 80%;
 }
 
 /*контактная форма*/
@@ -225,12 +236,42 @@ color: #6F6E6E;
 
 /*Футер_ОставитьМеню-СоцСети*/
 .footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 20px;
-	justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.footer_shedule{
+	display: none;
+}
+.footer_shedule{
+	display: none;
+}
+.footer_address{
+	display: none;
 }
 
+.footer_links {
+    background-color: #5EA03E;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* padding: 15px 0 15px 0; */
+    justify-content: start;
+	/* width: 80%; */
+}
+
+.footer_link_a {
+ 
+    padding-right: 15px;
+}
+
+.footer_social {
+    
+    display: flex;
+    flex-direction: row;  
+    align-items: unset;
+    justify-content: start;
+	/* width: 80%; */
+}
 	
 	
 }/*стили если экран менее 650 рх: end*/
