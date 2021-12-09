@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*верхняя информ. полоса */
+.top_band{
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #000;
+    background: #7e7c7c;
+    padding: 8px;
+    /* position: relative; */
+}
+.spanCircle{
+    width: 25px;
+    height: 25px;
+    background: #fbff07;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    left: 28px;
+}
+
+/*отступ справа у лого Корзины*/
+.cart_logo{
+   margin-right: 30px;
+   position: relative; 
+}
+
+/*отступы сверху+справа от телефон*/
+.telefon__link{
+    margin-right: 10px;
+    text-decoration: none;
+}
+.telefon{
+    margin-top: 5px; 
+}
+/*отступы сверху  от адрес*/
+.adress{
+    margin-top: 5px;    
+}
+
+/*№1 Корзина*/
+/*оболочка Корзины*/
+.cart{
+    border: 1px solid #000;
+    background: #bdbdbd;
+    width: 500px;
+    margin-top: 15px;
+}
+/*заголовок таблицы: отфлексить*/
+.cart_header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #919191;
+    padding: 10px 0;
+}
+/*заголовок таблицы: стиль текста*/
+.cart_header p{
+    font-weight: 600;
+}
+
+/*заголовок таблицы: стиль блоков*/
+.header_name{
+    width: 30%;
+}
+
+/*Слово "Размер" двигаю*/
+.hader_size{
+margin-left: -20px;    
+}
+
+
+/*разделительная линия в Корзине*/
+.hr_line{
+    display: flex;
+    align-items: center;
+ 
+}
+hr {
+    width: 70%;
+    margin: 0 10px;
+}
+
+/*Стиль для прилетающих Цена+Товар*/
+.cart_top{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #919191;
+}
+/*Ширина блока Товар*/
+.prodName{
+    width: 30%;
+}
+/*ширина 'РУБ.'*/
+.prodPrice{
+    width: 15%;
+    text-align: center;
+}
+
+/*Высота/Ширина блока 'ШТУК'*/
+.inputPrice{
+    max-height: 23px;
+    width: 42px;
+    padding-left: 3px;
+}
+.inputPrice:focus{
+    font-weight: 600;
+    border: 1px solid #111;
+    box-shadow: 0px 0px 4px 3px #8b8b8b;
+}
+
+/*ширина ЦЕНА*/
+.subPrice{
+    width: 10%;
+    text-align: right;
+}
+
+/*Нижний Блок в Корзине*/
+.cart_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+/*РасположитьКнопку ОформитьЗаказ*/
+.btnOrder{
+    margin: 15px auto;
+    padding: 8px 12px;
+}
+/*Наведение наКнопку ОформитьЗаказ*/
+.btnOrder:hover{
+    background: #515151;
+    box-shadow: 2px 2px 12px 6px #d0d0d0;
+    color: #FFF;
+    font-weight: 500;
+    border-style: double;
+}
+
+/*Расположение Итогового Ценника*/
+.totalPrice{
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 25px 8px 20px;
+}
+
+.totalPrice::after{
+    content: " руб.";
+    margin-left: 8px;
+}
+
+
+/*#2 Карточка ТОВАРА для >650px*/
+/*2 столбца по 200...300 рх, по центру*/
+.item  {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px ) );
+    justify-content: center;
+    column-gap: 10px;
+
+    border: 1px solid #000;
+    background: #60a0ff;
+}
+
+/*центровка фото через flex*/
+.item_img{
+   /*  width: 250px; */
+   border: 1px solid #000;
+   background: #8f8c8c;
+   display: flex;
+   justify-content: center;
+   padding: 8px 0;
+}
+
+/*размеры фото в Карточке ТОВАРА */
+.foto_item{
+    width: 250px; 
+    height: 250px;
+}
+
+/*2.2 ячейка ОПИСАНИЕ: центровка через flex*/
+.descript{
+    /* width: 230px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 15px;
+    flex-direction: column
+}
+
+/* ячейка ОПИСАНИЕ:расположить в ряд кнопки "Размер" */
+.descript .size{
+    display: flex;
+    gap: 10px;
+}
+
+/*Выпадающий список: РАЗМЕР*/
+.sizeSelect{
+    margin-left: 10px;
+}
+
+.size_btn{
+    border: 1px solid #000;
+    width: 30px;
+    height: 22px;
+    
+    border-radius: 5px;
+    line-height: 22px;
+    text-align: center;
+    cursor:default;
+}
+
+.size_btn:hover{
+background: #4de63f;
+box-shadow: 0px 0px 9px 2px #e6e6e6;
+}
+
+/*2.3 ячейка  Мини-фото Товара(preview)*/
+.preview_Item{
+    /* width: 250px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 15px;
+    /* flex-direction: column;*/
+}
+.pre_foto{
+    width: 50px;
+    height: 50px;
+}
+
+/*2.4. Кнопка В КОРЗИНУ  (AddToCart): центровка через flex*/
+.toCart{
+    /* width: 230px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    padding: 8px 15px;
+    flex-direction: column-reverse;
+}
+
+/*Расположить Кнопка В КОРЗИНУ  (AddToCart)*/
+.btnToCart{
+    margin: 15px auto;
+    padding: 8px 12px;
+}
+/*Наведение Кнопка В КОРЗИНУ  (AddToCart)*/
+.btnToCart:hover{
+    background: #515151;
+    box-shadow: 2px 2px 12px 6px #d0d0d0;
+    color: #FFF;
+    font-weight: 500;
+    border-style: double;
+}
+
+/*№3 ДРУГИЕ Карточки ТОВАРОВ*/
+.other_item {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px ) );
+    justify-content: center;
+    column-gap: 10px;
+    border: 1px solid #000;
+    background: #60a0ff;
+}
+/*фото ДРУГИЕ Карточки ТОВАРОВ*/
+.other_item_img {
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+
+    padding: 8px 24px;
+    flex-direction: column;
+     /* отступ м/у словами  */
+    gap: 15px;
+     /* отступ м/у карточками по низу */
+    margin-bottom: 15px;
+    /*родитель - для видимости кнопки*/
+    position: relative;    
+}
+
+/*фото ДРУГИЕ Карточки: ШхВ, отступВниз*/
+.other_foto_item {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+
+}
+
+/*Прячу ОПИСАНИЕ   "ДРУГИХ ТОВАРОВ" (other_item)*/
+.write_hidden{
+    display: none;
+}
+
+/*3.1.1.Кнопка 'ПОДРОБНЕЕ' на КарточкеДругогоТовара*/
+.btn_detail:hover{
+    box-shadow: -1px 0px 14px 5px #fff;
+    text-shadow: 5px -7px 8px white;
+    transition: 0.85s;
+}
+
+/*Кнопка видима при наведении на КарточкуДругогоТовара*/
+.other_item_img:hover .btn_detail {
+display:block;
+transition: 0.95s;
+}
+
+/*наведение на кнопку на КарточкеДругогоТовара*/
+.btn_detail{
+    width: 150px;
+    height: 40px;
+    border: 2px solid #fff;
+    align-self: center;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    bottom: 215px;
+    color: #FFFFFF;
+    display: none;
+    /*потомок - для видимости кнопки*/
+    position: absolute;
+
+}
+
+ .other_foto_item:hover  {
+    filter: brightness(60%);
+    transition: .65s;
+
+}
+
+
+
+
+
+
+
+
+

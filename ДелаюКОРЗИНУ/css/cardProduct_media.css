@@ -1,0 +1,87 @@
+/*экран менее 650 рх: start*/
+@media (max-width: 650px){
+
+    /*уменьшить шрифт телефон и адрес*/
+    .telefon__link {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .adress {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+
+/*№1 Корзина: оболочка Корзины*/
+ .cart{
+     width: 75vw;  
+   /* width: 350px;*/
+}
+
+/*заголовок таблицы: стиль текста*/
+.cart_header p{
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/*Слово "Размер" двигаю*/
+.hader_size{
+    margin-left: -40px;    
+    }
+
+/*Уменьш.шрифт в строке Добавленного Товара*/
+.cart_top{
+    font-size: 13px;
+}
+
+ 
+
+/*Разделительная Линия <hr> в Корзине*/
+hr {
+    width: 70%;
+    margin: 0 5px;
+}
+
+/*№2 Карточка ТОВАРА*/
+/*выстроить в столбик */
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+/*размеры фото в Карточке ТОВАРА */
+.foto_item{
+ 
+}
+
+/*2.3 ячейка ПревьюТовара (preview) убрать*/
+.preview_Item {
+display: none;
+}
+
+/*№3 ДРУГИЕ Карточки ТОВАРОВ*/
+/*При <650px ДругиеКарточки ПоЦентру*/
+.other_item  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Фото: размер и отступ*/
+.other_foto_item {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 5px;
+
+}
+
+/*Местоположение кнопки при  наведении на  КарточкаДругогоТовара*/
+.btn_detail{
+     top: 85px;
+}
+
+
+
+
+}/*экран менее 650 рх: end*/
+

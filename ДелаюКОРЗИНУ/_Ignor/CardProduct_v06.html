@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cardProduct.css">
+    <link rel="stylesheet" href="css/cardProduct_media.css">
+    <title>КОРЗИНА</title>
+</head>
+ 
+
+<body>
+
+    <!--№1 ВерхняяПолоса  (ИконкаКорзины и телефон): start-->
+    <div class="top_band">
+		
+        <div class="cart_logo">
+            <a href="#">
+            <img class="cart_svg" src="./svg/whiteCart.svg" alt="">
+            </a>
+        </div>
+
+        <span class="spanCircle">0</span>
+	
+        <div class="telefon"><a href="tel:+7(921)7770606" class="telefon__link"> +7(921)777-06-06</a></div>
+        <div class="adress">Velsk, Sambistoff str., 1</div>
+		
+    </div>
+	<!--№1 ВерхняяПолоса  (ИконкаКорзины и телефон): end -->
+
+    <!-- ХлебныеКрошки -->
+		  	<p class="backInHome center">
+			<a class="backInHome_link" href="index.html">Главная</a> / Карточка товара
+			</p>
+
+
+
+    <!--№1 Визуализация КОРЗИНА: start -->
+
+    <!-- #1.1 Блок_insertCart, в котором лежит (частично невидимый) блок КОРЗИНА : start -->
+    <div class="insertCart">
+
+        <!-- оболочка Корзины: верх + разделитель + низ + кнопка : start -->
+        <div class="cart">
+
+            <!-- заголовок таблицы -->
+            <div class="cart_header">
+                <p class="header_name">Товар</p>
+                <p class="hader_size">Размер</p>
+                <p class="header_price">Руб.</p>
+                <p class="header_number">Штук</p>
+                <p class="header_subPrice">Цена</p>
+                
+            </div>
+
+            <!--не видима; Верхн.часть Корзины: start
+            1.сюда залетает Товар и Цена
+            2.Этот div вставляется при клике на кнопку -->
+            
+            <!-- 
+            <div class="cart_top">
+            <div class="prodName">*Этот блок - невидимый. 
+            Появл-ся только при клике на кнопку "В корзину"*
+            </div>
+            <div class="size">XXL_</div>
+            <div class="prodPrice">*120000 *</div>
+            <input type="number" class="inputPrice" min="1" max="99" value="1">
+            <div class="subPrice">120000</div> 
+
+            </div> 
+            -->
+            <!-- не видима; Верхн.часть Корзины: end-->
+
+
+            <!-- hr разделительная линия (к ней м.б. привязка) -->
+            <div class="hr_line">
+                <hr>   
+                <h3>Итог, руб.</h3>
+            </div>
+
+            <!-- Нижн.часть Корзины ( видима, даже с итоговым нулем) -->
+            <div class="cart_bottom">
+                <button type="submit" class="btnOrder">Оформить заказ</button>
+                <div class="totalPrice"> 0.00*</div>
+            </div>
+
+            
+        </div>
+        <!-- оболочка Корзины: верх + разделитель + низ + кнопка : end -->
+
+
+    </div>
+    <!-- #1.1 Блок_insertCart, в котором лежит (частично невидимый) блок КОРЗИНА_cart: end -->
+
+    <!--№1 Визуализация КОРЗИНА: end -->
+
+    
+
+    <!--№2 Карточка ТОВАРА (тэг item): start -->
+блок ВЫБРАННОГО ТОВАРА (selected item)
+    <div class="item">
+
+        <!--2.1 ячейка Товар_фото -->
+       <div class="item_img">
+           <img class="foto_item" src="img/pf_500.jpg" alt="">
+
+       </div>
+
+       <!-- 2.2 ячейка ОПИСАНИЕ  -->
+       <div class="descript">
+
+            <div class="name">*Товар_5</div>
+
+            <div class="size">*Размер 
+                <select name="size" class="sizeSelect">
+                    <option value="x5_1">5XL</option>
+                    <option value="x5_2">5XXL</option>
+                </select>
+
+            <!-- <div class="size_btn" >M</div>
+            <div class="size_btn" >XL</div> -->
+            </div>
+
+            <div class="price">*500   </div>
+            <div class="write">*Товар№5:  Lorem ipsum dolor sit, 
+                amet consectetur adipisicing elit.   </div>
+            </div>
+
+       <!-- 2.3 ячейка Превью Товара Мини-фото(preview)-->
+       <div class="preview_Item"> 
+           <img class = "pre_foto" src="img/pf_501.jpg" alt="">
+           <img class = "pre_foto" src="img/pf_502.jpg" alt="">
+           <img class = "pre_foto" src="img/pf_503.jpg" alt="">
+       </div>
+
+       <!--2.4. Кнопка В КОРЗИНУ  (AddToCart)-->
+        <div class="toCart">
+            <button type="submit" class="btnToCart">В корзину</button>
+        </div>
+
+        
+    </div>
+    <!--№2 Карточка ТОВАРА (тэг item): end -->
+   
+
+
+<!--№3 ДРУГИЕ Карточки ТОВАРОВ (other_item): start -->
+блок ДРУГИХ ТОВАРОВ 
+
+    <div class="other_item">
+
+        <!--3.1 ячейка ДругойТовар_фото -->
+        
+        <!-- Карточка №1 -->
+        <div class="other_item_img">
+        <img class="other_foto_item" src="img/pf-101.jpg" alt="">
+
+        <div class="name">*Товар_1</div>
+        <div class="size">
+            *Размер 
+            <select name="size" class="sizeSelect">
+                <option value="x1_1">1 M</option>
+                <option value="x1_2">1 LM</option>
+            </select>
+        </div>
+        <div class="price">*100   </div>
+        <div class="write write_hidden">*Товар_№1:  Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit.   </div>
+
+            <div class="preview_Item write_hidden"> 
+                <img class = "pre_foto" src="img/shop-1.jpg" alt="">
+                <img class = "pre_foto" src="img/shop-2.jpg" alt="">
+                <img class = "pre_foto" src="img/shop-3.jpg" alt="">
+            </div>
+
+        <!-- 3.1.1. Кнопка 'ПОДРОБНЕЕ' на КарточкеДругогоТовара:  -->
+        <div class="btn_detail">Подробнее</div>
+
+        </div>
+
+
+
+        <!-- Карточка №2 -->
+        <div class="other_item_img">
+            <img class="other_foto_item" src="img/pf-102.jpg" alt="">
+
+            <div class="name">*Товар_2</div>
+            <div class="size">
+                *Размер 
+                <select name="size" class="sizeSelect">
+                    <option value="x2_1">2 L</option>
+                    <option value="x2_2">2M</option>
+                </select>
+            </div>
+            <div class="price">*200   </div>
+            <div class="write write_hidden">*Товар_№2:  Lorem ipsum dolor sit, 
+                amet consectetur adipisicing elit.   </div>
+
+                <div class="preview_Item write_hidden"> 
+                    <img class = "pre_foto" src="img/shop-4.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-5.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-6.jpg" alt="">
+                </div>
+
+         <!-- 3.1.2. Кнопка 'ПОДРОБНЕЕ' на Карточке"ДругойТовар" :  -->
+        <div class="btn_detail">Подробнее-2</div>
+    
+        </div>
+
+        
+        <!-- Карточка №3 -->
+        <div class="other_item_img">
+            <img class="other_foto_item" src="img/pf-103.jpg" alt="">
+
+            <div class="name">*Товар_3</div>
+            <div class="size">
+                *Размер 
+                <select name="size" class="sizeSelect">
+                    <option value="x3_1">3 ML</option>
+                    <option value="x3_2">3XX</option>
+                </select>
+            </div>
+            <div class="price">*300   </div>
+            <div class="write write_hidden">*Товар_№3:  Lorem ipsum dolor sit, 
+                amet consectetur adipisicing elit.   </div>
+
+                <div class="preview_Item write_hidden"> 
+                    <img class = "pre_foto" src="img/shop-7.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-8.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-9.jpg" alt="">
+                </div>
+
+         <!-- 3.1.3. Кнопка 'ПОДРОБНЕЕ' на Карточке"ДругойТовар":  -->
+        <div class="btn_detail">Подробнее</div>
+    
+        </div>
+
+        <!-- Карточка №4 -->
+        <div class="other_item_img">
+            <img class="other_foto_item" src="img/pf-104.jpg" alt="">
+
+            <div class="name">*Товар_4</div>
+            <div class="size">
+                *Размер 
+                <select name="size" class="sizeSelect">
+                    <option value="x4_1">4 XXL</option>
+                    <option value="x4_2">4 XL</option>
+                </select>
+            </div>
+            <div class="price">*400   </div>
+            <div class="write write_hidden">*Товар_№4:  Lorem ipsum dolor sit, 
+                amet consectetur adipisicing elit.   </div>
+
+                <div class="preview_Item write_hidden"> 
+                    <img class = "pre_foto" src="img/shop-1.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-2.jpg" alt="">
+                    <img class = "pre_foto" src="img/shop-11.jpg" alt="">
+                </div>
+
+         <!-- 3.1.2. Кнопка 'ПОДРОБНЕЕ' на Карточке"ДругойТовар":  -->
+        <div class="btn_detail">Подробнее</div>
+    
+        </div>
+
+    </div>
+
+
+    <!-- ДРУГИЕ Карточки ТОВАРОВ (other_item): end -->    
+
+ <!-- подключение JS  -->
+ <script src="js/card_1.js"></script>
+ <script src="js/detail_2.js"></script>
+ <script src="js/card_1_delit.js"></script>
+
+ <!-- <script src="js/itemToOther_3.js"></script> -->
+  <!-- откл, т.к. задумка с ротацией карточне не удалась -->
+ 
+    
+</body>
+
+</html>
