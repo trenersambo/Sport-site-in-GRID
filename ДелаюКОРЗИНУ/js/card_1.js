@@ -14,7 +14,14 @@ let btnToCart = document.querySelectorAll ('.btnToCart')
 btnToCart.forEach(function (btnToCart){
     //№1 клик по ' ВКорзину' вызовет ф-цию extractDescript
 btnToCart.addEventListener ('click' , function (event){
-    extractDescript (event)
+    extractDescript (event);
+
+  // Ф-ции из файла calcCard_3.js: 
+  // а).клик "ВКорзину" -> посчитает в кружочке, 
+    calcAmount ( )
+  // б). клик в окшке (увелич. кол-ва ШТУК) -> п/считает в кружочке,
+    reCalcAmount ( )
+
     })
 })
 
@@ -50,6 +57,7 @@ function extractDescript (eventExtr){
             </div>  `)
 
 }//function extractDescript(): end
+
 
 }
 
