@@ -1,5 +1,11 @@
 /**
- *  ДОБАВЛЕНИЕ В КОРЗИНУ
+ * Файл для: 
+ * 1. Обработака кнопки "В КОРЗИНУ"
+ * 2. Отрисовка строк с Товаром внутри Корзины
+ * 3. Видна /  не видна Корзина
+ */
+
+ /*
  *  чтоб все работало - начинаю с обертки в ф-цию ButtonAddToCart()
  *  Иначе не срабатывла кнопка "В корзину" при смене товара,
  *  скрипт которой написан в файле detail_2.js
@@ -16,11 +22,20 @@ btnToCart.forEach(function (btnToCart){
 btnToCart.addEventListener ('click' , function (event){
     extractDescript (event);
 
-  // Ф-ции из файла calcCard_3.js: 
+  // Ф-ции из файла calcCard_3.js (математика): 
   // а).клик "ВКорзину" -> посчитает в кружочке, 
     calcAmount ( )
+
   // б). клик в окшке (увелич. кол-ва ШТУК) -> п/считает в кружочке,
     reCalcAmount ( )
+
+    // в). Считает сумму за цена*товар только 1 раз 
+    // (при первичном клике 'ВКорзину')
+     calcSubPrice( )
+
+     // г). Считает строку 'Итого' только 1 раз 
+    // (при первичном клике 'ВКорзину')
+     calcTotalPrice( )
 
     })
 })
@@ -60,4 +75,13 @@ function extractDescript (eventExtr){
 
 
 }
+
+
+/*№2. Без кода этой главы  - корзина ВСЕГДА видна */
+function cartShowHidden ( ){
+  let cartDiv = document.querySelector('.cart')
+  cartDiv.classList.toggle ('cart_ShowHidden')
+}
+
+document.querySelector ('.top_band').addEventListener('click' , cartShowHidden)
 

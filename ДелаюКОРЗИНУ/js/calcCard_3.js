@@ -28,7 +28,7 @@ for (let i = 0; i < inputValue.length; i++){
     amount = +amount + +inputValue[i].value;
 
 }
-console.log (amount);
+//console.log (amount);
  
 
 // Кол-во штук прилетает в КРУЖОК
@@ -38,16 +38,65 @@ spanCircle_div.innerText = amount;
 }
 
 
-
-//№ 1.1. В случае смены цифр внутри окошка "ШТУК" - нужен пересчет
-// именно в виде функции, т.к. этот п/счет нужен будет в файле card_1.js
+// внутри КОРЗИНЫ
+//№ 1.1. В случае смены цифр внутри окошка "ШТУК" - нужен пересчет: в Кружке и в Цене
+//  Сдеано функцией, т.к. её вставляю  в файл card_1.js
 function reCalcAmount ( ){
 
     document.querySelectorAll ('.inputPrice').forEach (function (event){
+
+        //Пересчет в кружочке: как реакция на мышку
    event.addEventListener ('mousemove', calcAmount )
-     event.addEventListener  ('change' , calcAmount)
+   event.addEventListener  ('change' , calcAmount)
+
+        //Пересчет в столбце 'Цена': как реакция на мышку
+    event.addEventListener  ('mousemove' , calcSubPrice )
+    event.addEventListener  ('change' , calcSubPrice )
+
+      //  Пересчет в строке 'Итого': как реакция на мышку
+    event.addEventListener  ('mousemove' , calcTotalPrice )
+    event.addEventListener  ('change' , calcTotalPrice )
+
 })
 
 }
+
+
+// №2. Счетчик  ЦЕНЫ за кол-во ШТУК товара (руб*штук = цена одного товара)
+
+function calcSubPrice( ){
+
+    //ссылки на Цена / Штук / Цена
+    let prodPriceDiv = document.querySelectorAll('.prodPrice') ;
+    let inputValue = document.querySelectorAll ('.inputPrice');
+    let subPriceDiv = document.querySelectorAll('.subPrice') ;
+
+    let price = 0;
+
+    for (let i = 0; i < inputValue.length; i++){
+        price = parseInt(prodPriceDiv[i].innerText)  * inputValue[i].value  ;
+        subPriceDiv[i].innerText = `${price}`
+    
+    }
+
+}
+
+// №3. Считает 'ИТОГО' за все выбранные товары
+
+function calcTotalPrice( ){
+
+    //ссылки на ...ЦенаШтукТовара / ЦенаВсейПокупки
+    let subPriceDiv = document.querySelectorAll('.subPrice') ;    
+    let total = document.querySelector ('.totalPrice') ;
+
+    let priceTotal = 0;    
+
+    for (let i = 0; i < subPriceDiv.length; i++){
+        priceTotal = parseInt(priceTotal) + parseInt (subPriceDiv[i].innerText);
+        total.innerText = `${priceTotal}` ;
+    }
+
+}
+
 
 

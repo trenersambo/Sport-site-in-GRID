@@ -49,10 +49,10 @@ hr {
     flex-direction: column;
 }
 
-/*размеры фото в Карточке ТОВАРА */
+/*размеры фото в Карточке ТОВАРА 
 .foto_item{
  
-}
+}*/
 
 /*2.3 ячейка ПревьюТовара (preview) убрать*/
 .preview_Item {
@@ -81,7 +81,51 @@ display: none;
 }
 
 
+/*ФУТЕР*/
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+/*Футер. Колонка№1 (ссылки по сайту) */
+.footer_links {
+    background-color: #5EA03E;
+    display: flex;
+    flex-direction: row;
+ 
+    justify-content:space-around;
+}
+/*Убрать слово МЕДИА*/
+.footer_link_a:nth-child(3n ) {
+display: none;
+ 
+}
 
+.footer_link_a {
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+/*Футер. Колонка№2 (расписание)*/
+.footer_shedule {
+    display: none;
+}
+
+
+/*Футер. Колонка№3 (адрес+телефон)*/
+.footer_address {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 18px;
+    padding: 10px 0 15px 0;
+
+    font-size: 13px;
+     background: rgb(1, 202, 159);
+}
+
+/*Футер. Колонка№4 (соцсети)*/
+.footer_social {
+    display: none;
+}
 
 }/*экран менее 650 рх: end*/
 
