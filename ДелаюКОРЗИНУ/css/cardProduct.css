@@ -363,8 +363,8 @@ box-shadow: 0px 0px 9px 2px #e6e6e6;
 
 /*3.1.1.Кнопка 'ПОДРОБНЕЕ' на КарточкеДругогоТовара*/
 .btn_detail:hover{
-    box-shadow: -1px 0px 14px 5px #fff;
-    text-shadow: 5px -7px 8px white;
+    box-shadow: -1px 0px 12px 2px #f6f914;
+    /* text-shadow: 5px -7px 8px white; */
     transition: 0.85s;
 }
 
@@ -381,7 +381,7 @@ transition: 0.95s;
     border: 2px solid #fff;
     align-self: center;
     font-size: 25px;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     cursor: pointer;
     bottom: 215px;
@@ -390,6 +390,9 @@ transition: 0.95s;
     /*потомок - для видимости кнопки*/
     position: absolute;
 
+    background: #F3F40A;
+    color: #f00c1f;
+    border-radius: 8px;
 }
 
  .other_foto_item:hover  {
@@ -463,6 +466,10 @@ ul li:nth-child(1) {
     color: #454545;
     padding-right: 25px;
     box-sizing: border-box;
+}
+/*смена цвета при наведении на иконку Соцсети*/
+.svg__hover:hover {
+    fill: red;
 }
 
 
