@@ -1,0 +1,484 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*верхняя информ. полоса */
+.top_band{
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #000;
+    background: #7e7c7c;
+    padding: 8px;
+    /* position: relative; */
+}
+.spanCircle{
+    width: 25px;
+    height: 25px;
+    background: #fbff07;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    left: 28px;
+}
+
+/*отступ справа у лого Корзины*/
+.cart_logo{
+   margin-right: 30px;
+   position: relative; 
+}
+
+/*отступы сверху+справа от телефон*/
+.telefon__link{
+    margin-right: 10px;
+    text-decoration: none;
+}
+.telefon{
+    margin-top: 5px; 
+}
+/*отступы сверху  от адрес*/
+.adress{
+    margin-top: 5px;    
+}
+
+/*Хлебные крошки*/
+.backInHome{
+    color: #FFFFFF;
+    padding: 20px 25px;
+}
+.backInHome_link{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*Фоновая картинка*/
+.wrapper {
+    background-color: rgb(62, 62, 62);
+    background-image: url(../img/rasp-fon-2.jpg);
+    background-size: 100%;
+ 
+}
+
+/*общая центровка контента*/
+.contentWrapper{
+    max-width: 750px;
+    margin: 0 auto;
+ 
+}
+
+
+/*№1 Корзина*/
+/*оболочка Корзины. Не видима, пока не сраб.JS*/
+.cart{
+    border: 1px solid #000;
+    background: #bdbdbd;
+    width: 500px;
+    margin-top: 15px;
+    display: none;
+}
+
+/*Видимоасть включает ч/з JS: кликом по кружку*/
+.cart_ShowHidden{
+    display: block;
+}
+
+/*заголовок таблицы: отфлексить*/
+.cart_header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #919191;
+    padding: 10px 0;
+}
+/*заголовок таблицы: стиль текста*/
+.cart_header p{
+    font-weight: 600;
+}
+
+/*заголовок таблицы: стиль блоков*/
+.header_name{
+    width: 30%;
+}
+
+/*Слово "Размер" двигаю*/
+.hader_size{
+margin-left: -20px;    
+}
+
+
+/*разделительная линия в Корзине*/
+.hr_line{
+    display: flex;
+    align-items: center;
+ 
+}
+hr {
+    width: 70%;
+    margin: 0 10px;
+}
+
+/*Стиль для прилетающих Цена+Товар*/
+.cart_top{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #919191;
+}
+/*Ширина блока Товар*/
+.prodName{
+    width: 30%;
+}
+/*ширина 'РУБ.'*/
+.prodPrice{
+    width: 15%;
+    text-align: center;
+}
+
+/*Высота/Ширина блока 'ШТУК'*/
+.inputPrice{
+    max-height: 23px;
+    width: 42px;
+    padding-left: 3px;
+}
+.inputPrice:focus{
+    font-weight: 600;
+    border: 1px solid #111;
+    box-shadow: 0px 0px 4px 3px #8b8b8b;
+}
+
+/*ширина ЦЕНА*/
+.subPrice{
+    width: 10%;
+    text-align: right;
+}
+
+/*Нижний Блок в Корзине*/
+.cart_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+/*РасположитьКнопку ОформитьЗаказ*/
+.btnOrder{
+    margin: 15px auto;
+    padding: 8px 12px;
+}
+/*Наведение наКнопку ОформитьЗаказ*/
+.btnOrder:hover{
+    background: #515151;
+    box-shadow: 2px 2px 12px 6px #d0d0d0;
+    color: #FFF;
+    font-weight: 500;
+    border-style: double;
+}
+
+/*Расположение Итогового Ценника*/
+.totalPrice{
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 25px 8px 20px;
+}
+
+.totalPrice::after{
+    content: " руб.";
+    margin-left: 8px;
+}
+
+/*Заголовок перед карточкой товара*/
+.item_select{
+    font-size: 30px;
+    color: #f0ff0e;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+/*#2 Карточка ТОВАРА для >650px*/
+/*2 столбца по 200...300 рх, по центру*/
+.item  {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px ) );
+    justify-content: center;
+    column-gap: 10px;
+
+    border: 1px solid #000;
+    background: #60a0ff;
+
+    margin: 0 auto;
+}
+
+/*центровка фото через flex*/
+.item_img{
+   /*  width: 250px; */
+   border: 1px solid #000;
+   background: #8f8c8c;
+   display: flex;
+   justify-content: center;
+   padding: 8px 0;
+}
+
+/*размеры фото в Карточке ТОВАРА */
+.foto_item{
+    width: 250px; 
+    height: 250px;
+}
+
+/*2.2 ячейка ОПИСАНИЕ: центровка через flex*/
+.descript{
+    /* width: 230px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 15px;
+    flex-direction: column
+}
+
+/* ячейка ОПИСАНИЕ:расположить в ряд кнопки "Размер" */
+.descript .size{
+    display: flex;
+    gap: 10px;
+}
+
+/*Выпадающий список: РАЗМЕР*/
+.sizeSelect{
+    margin-left: 10px;
+}
+
+.size_btn{
+    border: 1px solid #000;
+    width: 30px;
+    height: 22px;
+    
+    border-radius: 5px;
+    line-height: 22px;
+    text-align: center;
+    cursor:default;
+}
+
+.size_btn:hover{
+background: #4de63f;
+box-shadow: 0px 0px 9px 2px #e6e6e6;
+}
+
+/*2.3 ячейка  Мини-фото Товара(preview)*/
+.preview_Item{
+    /* width: 250px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 15px;
+    /* flex-direction: column;*/
+}
+.pre_foto{
+    width: 50px;
+    height: 50px;
+}
+
+/*2.4. Кнопка В КОРЗИНУ  (AddToCart): центровка через flex*/
+.toCart{
+    /* width: 230px; */
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+    padding: 8px 15px;
+    flex-direction: column-reverse;
+}
+
+/*Расположить Кнопка В КОРЗИНУ  (AddToCart)*/
+.btnToCart{
+    margin: 15px auto;
+    padding: 8px 12px;
+}
+/*Наведение Кнопка В КОРЗИНУ  (AddToCart)*/
+.btnToCart:hover{
+    background: #515151;
+    box-shadow: 2px 2px 12px 6px #d0d0d0;
+    color: #FFF;
+    font-weight: 500;
+    border-style: double;
+}
+
+/*стиль для линии надо словами "Возможно, эти.."*/
+.targetTag{
+    color: #fafe02;
+    text-align: center;
+
+    font-weight: 900;    
+    margin-top: 15px;
+}
+
+
+/*заголовок перед ДругиеТовары*/
+.interestItem{
+    font-size: 30px;
+    color: #f0ff0e;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*№3 ДРУГИЕ Карточки ТОВАРОВ*/
+.other_item {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px ) );
+    justify-content: center;
+    column-gap: 10px;
+    border: 1px solid #000;
+    background: #60a0ff;
+
+    margin: 0 auto;
+}
+/*фото ДРУГИЕ Карточки ТОВАРОВ*/
+.other_item_img {
+    border: 1px solid #000;
+    background: #8f8c8c;
+    display: flex;
+
+    padding: 8px 24px;
+    flex-direction: column;
+     /* отступ м/у словами  */
+    gap: 15px;
+     /* отступ м/у карточками по низу */
+    margin-bottom: 15px;
+    /*родитель - для видимости кнопки*/
+    position: relative;    
+}
+
+/*фото ДРУГИЕ Карточки: ШхВ, отступВниз*/
+.other_foto_item {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+
+}
+
+/*Прячу ОПИСАНИЕ   "ДРУГИХ ТОВАРОВ" (other_item)*/
+.write_hidden{
+    display: none;
+}
+
+/*3.1.1.Кнопка 'ПОДРОБНЕЕ' на КарточкеДругогоТовара*/
+.btn_detail:hover{
+    box-shadow: -1px 0px 12px 2px #f6f914;
+    /* text-shadow: 5px -7px 8px white; */
+    transition: 0.85s;
+}
+
+/*Кнопка видима при наведении на КарточкуДругогоТовара*/
+.other_item_img:hover .btn_detail {
+display:block;
+transition: 0.95s;
+}
+
+/*наведение на кнопку на КарточкеДругогоТовара*/
+.btn_detail{
+    width: 150px;
+    height: 40px;
+    border: 2px solid #fff;
+    align-self: center;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    bottom: 215px;
+    color: #FFFFFF;
+    display: none;
+    /*потомок - для видимости кнопки*/
+    position: absolute;
+
+    background: #F3F40A;
+    color: #f00c1f;
+    border-radius: 8px;
+}
+
+ .other_foto_item:hover  {
+    filter: brightness(60%);
+    transition: .65s;
+
+}
+
+
+/*ФУТЕР*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25%, 400px));
+
+}
+
+/*Футер. Колонка№1 (ссылки по сайту) */
+.footer_links {
+    background-color: #5EA03E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 15px 0;
+}
+.footer_link_a {
+    text-decoration: none;
+    line-height: 2em;
+    color: #4E4E4E;
+}
+
+/*Футер. Колонка№2 (расписание)*/
+.footer_shedule {
+    background-color: #65C065;
+    color: #4E4E4E;
+}
+.h3__open {
+    margin: 5px 0 10px 5px;
+}
+.open__ul_right {
+    list-style: none;
+    margin-left: 10px;
+    border: none;
+}
+ul li:nth-child(1) {
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.li__open {
+    padding-bottom: 8px;
+}
+
+
+/*Футер. Колонка№3 (адрес+телефон)*/
+.footer_address {
+    background: #01ca9f;
+    color: #4E4E4E;
+    
+}
+
+/*Футер. Колонка№4 (соцсети)*/
+.footer_social {
+    background-color: #96CCBA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.soc_top_link {
+    text-decoration: none;
+    color: #454545;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+/*смена цвета при наведении на иконку Соцсети*/
+.svg__hover:hover {
+    fill: red;
+}
+
+
+
+
+
+
+
+
+
+
+
