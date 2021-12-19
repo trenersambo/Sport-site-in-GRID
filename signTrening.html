@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleTab.css">
+    <title>Запись на тренировки</title>
+</head>
+
+<body>
+
+    	<!--№1 Над хедером (контакты): start-->
+        <div class="top_header_box">
+		
+            <div class="logo">
+                <a href="#">
+                <img class="logo__img" src="./svg/sambo5.svg" alt="">
+                </a>
+            </div>
+            
+            
+            
+            
+            <!--Меню Бутерброд: для экрана>650px не видим: start-->
+            
+            <!--конструкция для: клик на ГАМБУРГЕР - появление Меню nav  -->
+            <!--Checked = Меню появляется только при клике на Гамбургер-->
+            <input	type="checkbox" id="switcher" checked>
+            <label class="menu__top" for="switcher">
+             
+                <!--ГАМБУРГЕР svg-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFF226" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                 
+            </label>
+            
+            <!--список МЕНЮ при клике на ГАМБУРГЕР: start-->
+            
+            <nav class="nav">
+            
+                                <!--крестик в менюшке-->
+                    <label for="switcher" class="close_menu">
+    
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z" fill="#6F6E6E"/>
+                        </svg>
+                    </label>
+            
+                <!--Заглавие меню-->
+                     <h3 class="nav__heading">MENU</h3>
+                        
+                    <!--Слова в меню//подменю-->
+                        <ul class="nav__catalog">
+                            
+                            <li class="li_nodecor">
+                                
+                                <a href="#" class="color-h3-menu">HOME</a>
+                                <ul class="nav__items">	</ul>
+                            </li>
+                            
+                            
+                            <li class="li_nodecor">
+                                
+                                <a href="#" class="color-h3-menu">TRENING </a>
+                                <ul class="nav__items">
+                                    <li><a href="#" class="li_nolink">Sambo</a></li>
+                                    <li><a href="#" class="li_nolink">WorkOut</a></li>
+                                    <li><a href="#" class="li_nolink">Isoton</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="li_nodecor">
+                                <a href="#" class="color-h3-menu">MEDIA</a>
+                                <ul class="nav__items">
+                                    <li><a href="#" class="li_nolink">Our trainers</a></li>
+                                    <li><a href="#" class="li_nolink">Blog</a></li>
+                                    <li><a href="#" class="li_nolink">News</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="li_nodecor">
+                                <a href="#" class="color-h3-menu">SHOP</a>
+                                <ul class="nav__items">
+                                    <li><a href="#" class="li_nolink">Uniform </a></li>
+                                    <li><a href="#" class="li_nolink">Equipment</a></li>
+                                    <li><a href="#" class="li_nolink">Program</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            <li class="li_nodecor">
+                                
+                                <a href="#" class="color-h3-menu">CONTACT US</a>
+                                <ul class="nav__items">	</ul>
+                            </li>
+    
+                        </ul>
+                
+            
+            
+            </nav>
+            
+            
+            <!--список МЕНЮ при клике на ГАМБУРГЕР: end-->
+            
+            
+            
+            
+            
+            <!--Меню Бутерброд: для экрана>650px не видим: end-->
+            
+            
+            
+            <div class="telefon"><a href="tel:+7(921)777-066" class="telefon__link"> +7(921)777-066</a></div>
+            <div class="adress">Velsk, Sambistoff str., 1</div>
+            
+        </div>
+        <!--№1 Над хедером (контакты): end-->
+
+
+	<!-- wrapper = Общий ч/б фон с бойцами) для всех блоков: start-->
+	<div class="wrapperFon">
+
+        <p class="backToHome"> <a href="index.html">Главная</a>  / Запись на тренировку</p>
+
+    <h2 class="p_top_text">Страница записи на тренировки</h2>
+
+    <!-- обертка для блока с ТАБами: start-->
+    <div class="wrapperTab">
+        
+
+        <!-- обертка для кнопок-->
+        <div class="link_wrapper">
+
+            <div class="tabBtn activeLink">Самбо</div>
+            <div class="tabBtn ">Изотон</div>
+            <div class="tabBtn ">Клубная карта</div>
+        </div>
+
+        <!-- обертка для блоков, которые появятся от клика на кнопку: start-->
+        <div class="content_wrapper">
+
+            <div class="content activeContent">
+                
+                <!-- форма записи: start -->
+                <div class="sambo_form">
+                    
+
+                    <!-- Форма записи на трен-ки: start -->
+
+                    <div class="send_info">
+         
+                        <form action="#">
+                            <fieldset class="field_info">
+                                <legend class="legend_El">Контактная информация</legend>
+                                <p class="text__info">Поле, обязательное для заполнения отмечено <em>*</em></p>
+                                <div class="info__user_box">
+                
+                                    <div class="fio_user text__info">
+                                        <p><label for="userName">Ваше Имя<em>*</em> </label></p>
+                                        <input class="input_userName" id="userName" placeholder="Имя Фамилия" required="">
+                                    </div>
+                                    
+                                    <div class=" fon_user text__info">
+                                        <p> <label for="phone">Телефон  </label></p>
+                                        <input class="input_userName" id="phone" placeholder="+7900-000-55-55 " pattern="[^A-Za-zА-Яа-яЁё]+$">
+                                    </div>
+                
+                                    <div class="mail_user text__info">
+                                        <p> <label for="mail">E-mail <em>*</em></label></p>
+                                        <input class="input_userName" id=" mail" placeholder="user name @ mail.ru" required="">
+                                    </div>
+                
+                                    
+                
+                                </div>
+                
+                            </fieldset>
+                
+                
+                            
+                
+                            <fieldset class="field_info">
+                                <legend class="legend_El">Для сообщений</legend>
+                                
+                                <div class="message_user text__info">
+                                <p> <label for="msg">Что вы хотели бы сообщить.
+                                 Тренер прочтет это в течение 36 часов.</label> </p>
+                                
+                
+                                <textarea class="input_userName" id="msg" placeholder="Пишите тут..."></textarea>
+                                
+                                </div>
+                            </fieldset>
+                            
+                            <div class="btn_send">
+                                <input class="sendBtn" type="submit" value="Отправить">
+                            </div>
+                
+                            
+                        </form>
+                
+                
+                    </div>
+
+                    <!-- Форма записи на трен-ки: end -->
+
+                </div>
+                <!-- форма записи: end -->
+
+                <!-- аккордеон: start -->
+<div class="sambo_akkordeon">
+                   
+<h2>Тренера по САМБО</h2>
+
+    <!--Секция аккордеона: Тренер №1 -->
+<p class="top_text_akkord">Из списка можно ознакомиться с тренером и какие группы он ведет</p>
+<button class="accordion">
+    <img src="svg/face.svg" alt="">
+    <p class="button_text">Тренер по САМБО Чемпиков Сергей Викторович</p>
+</button>
+
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+    <!--Секция аккордеона: Тренер №2 -->
+    <button class="accordion">
+        <img class="svg_akkord" src="svg/face.svg" alt="">
+        <p class="button_text">Тренер по САМБО Мастеровой Максим Сергеевич</p>
+    </button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+    <!--Секция аккордеона: Тренер №2 -->
+    <button class="accordion">
+        <img src="svg/face.svg" alt="">
+        <p class="button_text">Тренер по САМБО Борцовский Дмитрий Борисович</p>
+    </button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+    <!-- аккордеон: end -->
+
+
+            </div>
+
+            <div class="content">
+                <div class="bjj_form">#2 ИЗОТОН  форма ввода Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita praesentium itaque harum, consequatur illo nihil esse illum pariatur nulla, voluptates modi libero aliquam 
+                    aspernatur voluptatum. Soluta voluptatum quae voluptates? Minus!</div>
+
+                <div class="bjj_sticky">#2 ИЗОТОН "липакая технология" Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, error ipsum ducimus debitis accusamus numquam expedita, perferendis harum vel, consequuntur officia sed. 
+                    Quae maiores nesciunt sint tempore similique illo voluptatum.</div>                
+            </div>
+
+            <div class="content">
+                <div class="judo_form">#3 Клубная карта форма ввода</div>
+                <div class="judo_sticky">#3 Клубная карта : Платежные системы</div>                
+            </div>
+
+        </div>
+        <!-- обертка для блоков, которые появятся от клика на кнопку: end-->
+
+
+
+    </div>
+    <!-- обертка для блока с ТАБами: end-->
+
+    
+    </div>
+	<!-- wrapper = Общий ч/б фон с бойцами) для всех блоков: end-->
+
+    <!-- тут будет футер -->
+
+  <script src="js/signTrening.js"></script>
+
+</body>
+
+</html>

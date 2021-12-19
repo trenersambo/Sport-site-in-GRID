@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backToHome{
+padding: 15px 0px 15px 35px;
+color: #FFFFFF;
+font-size: 13px;    
+}
+
+.backToHome a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+/*задний фон*/
+.wrapperFon{
+ background-image: url(../img/rasp-fon-2.jpg);
+ background-size: 100%;
+ height: 100vh;
+}
+
+/*текст 'Запись на тренировки' */
+.p_top_text{
+    display: flex;
+    margin: 0 auto;
+    max-width: 750px;
+    color: #f02f0e;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*общая обертка для ТАБов*/
+.wrapperTab{
+    margin: 0 auto;
+    max-width: 750px;
+    border: 1px solid #000;
+    background: #c7c7c7;
+}
+
+/*обертка для кнопок*/
+.link_wrapper{
+    display: flex;
+
+}
+/*сами ТАБы : самбо, БЖЖ, дзюдо*/
+.tabBtn{
+    margin: 20px 0 0 20px;
+    border-left: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    width: 80px;
+
+}
+
+.activeLink{
+    background: #c7c7c7;
+    position: relative;
+    top: 1px;
+    border-right-style: groove;
+    
+    color: #636262;
+    text-align: center;
+}
+
+/*контент, кот-й д.увидеть от клика на кнопку*/
+.content_wrapper{
+    border: 1px solid #FFFFFF;
+    margin-left: 20px;
+    padding: 15px 0 35px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*по умол.: не видим*/
+.content{
+    display: none;
+}
+
+/*видимость контента*/
+.activeContent{
+    display:flex;
+
+}
+
+/*TAB: экран менее 650рх: start*/
+@media (max-width: 650px){
+
+    .tabBtn:first-child{
+        margin-left: 20px;
+    }
+    .tabBtn{
+        margin: 20px 0 0 3px;
+    }
+    
+ }/*TAB: экран менее 650 рх: end*/
+    
+
+ /*СТИЛИ ДЛЯ КОНТАКТНОЙ ФОРМЫ*/
+    
+.send_info {
+max-width: 350px;
+background: #c7c7c7;/*временно*/
+}
+
+/*окантовка общая*/
+.field_info{
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    margin: 0 5px 20px 5px;
+}
+.legend_El{
+    padding: 10px 8px;
+    margin: 10px 15px;
+}
+
+.text__info {
+    margin-bottom: 10px;
+}
+
+ em{
+    font-weight: 900;
+    color: red;
+ }
+
+ label [name]{
+     font-weight: 600;
+ }
+/*поля ввода имя, телефон, почта*/
+ .input_userName{
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+ }
+
+  label {
+     color: #cc3507;
+     padding-left: 8px;
+ }
+ 
+ [placeholder]{
+    color: #af1717;
+    padding-left: 10px;
+ }
+ /*высота поля для месседжа*/
+ #msg{
+     height: 70px;
+ }
+
+ /*кнопка отправки*/
+ .btn_send{
+    text-align: center;
+    padding: 0 0 20px 0;
+    /* width: 100px; */
+    margin: 0 auto;
+}
+
+.sendBtn{
+    width: 100px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.sendBtn:hover{
+    border: 1px solid #cc3507;
+    box-shadow: 2px 0px 10px 4px #FFFFFF;
+}
+
+/* СТИЛИ ДЛЯ КОНТАКТНОЙ ФОРМЫ: *экран менее 650рх: start*/
+@media (max-width: 650px){
+
+    /*форму связи и Список Тренеров в столбик*/
+.activeContent {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.send_info {
+    max-width: 500px;
+ 
+}
+
+
+}
+
+
+/*аккордеон*/
+/*ограничить ширину блока с аккордеоном*/
+.sambo_akkordeon{
+    max-width: 500px;
+    margin-right: 5px;
+}
+.sambo_akkordeon h2{
+    text-align: center;
+}
+
+.top_text_akkord{
+    margin: 10px 5px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  /*svg расположение оп центру*/
+  .svg_akkord{
+      align-self: center;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
